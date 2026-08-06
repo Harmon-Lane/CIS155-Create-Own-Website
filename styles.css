@@ -7,6 +7,15 @@ body {
     background: url(ocean7-5.gif);
 }
 
+.doom_ascii_logo, ul>li:hover, section#enter_button.border>a:hover, a:hover {
+    /* background: radial-gradient(ellipse, #ff0000, #fc8207, #fcfc07); */
+    /* background: radial-gradient(ellipse, mediumorchid, darkorchid, orchid 60%); */
+    background: radial-gradient(ellipse, darkorchid 30%, orchid 60%);
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
 .border {
     padding: 0.5rem;
     border: 0.5rem outset grey;
@@ -20,14 +29,17 @@ body {
     justify-content: center;
 }
 
+div.center_items {
+    flex-direction: column;
+    gap: 10dvh;
+}
+
 header.border.home {
-    width: fit-content;
     text-align: center;
     padding: 0;
     padding-bottom: 2.5%;
     padding-left: 5%;
     padding-right: 5%;
-    margin-top: 2.5%;
     background: linear-gradient(lemonchiffon 10%, lightgrey 40%);
     position: relative;
 }
@@ -42,22 +54,12 @@ header.home>footer {
 
 pre.doom_ascii_logo {
     margin-bottom: 0rem;
-    font-size: 2rem;
-}
-
-.doom_ascii_logo, ul>li:hover, section#enter_button.border>a:hover, a:hover {
-    /* background: radial-gradient(ellipse, #ff0000, #fc8207, #fcfc07); */
-    /* background: radial-gradient(ellipse, mediumorchid, darkorchid, orchid 60%); */
-    background: radial-gradient(ellipse, darkorchid 30%, orchid 60%);
-    background-clip: text;
-    color: transparent;
-    font-weight: bold;
+    font-size: 3dvw;
 }
 
 section#enter_button.border {
     width: fit-content;
-    margin-top: 2em;
-    font-size: 4rem;
+    font-size: 7dvh;
     background: lightgrey;
 }
 
