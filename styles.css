@@ -21,6 +21,7 @@ body {
     border: 0.5rem outset grey;
     /* background: linear-gradient(lightgrey, lightgoldenrodyellow); */
     background: linear-gradient(lightgrey, lemonchiffon);
+    overflow: auto;
 }
 
 .center_items {
@@ -41,12 +42,10 @@ header.border.home {
     padding-left: 5%;
     padding-right: 5%;
     background: linear-gradient(lemonchiffon 10%, lightgrey 40%);
-    position: relative;
 }
 
-header.home>footer {
-    text-align: initial;
-    width: fit-content;
+body.home>footer {
+    color: lightgrey;
     position: absolute;
     right: 0.5rem;
     bottom: 0.5rem;
