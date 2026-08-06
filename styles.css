@@ -1,33 +1,99 @@
 /* How tf do I get comic sans on linux fr */
-
 body {
     font-family: monospace;
+    /* I got this gif here: https://www.reddit.com/media?url=https%3A%2F%2Fi.redd.it%2Ft7win735kri61.gif
+     * Then edited it to be slower.
+     */
+    background: url(ocean7-5.gif);
 }
 
-header {
+.border {
+    padding: 0.5rem;
+    border: 0.5rem, outset, grey;
+    /* background: linear-gradient(lightgrey, lightgoldenrodyellow); */
+    background: linear-gradient(lightgrey, lemonchiffon);
+}
+
+.center_items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header.border.home {
+    width: fit-content;
     text-align: center;
-}
-
-main {
+    padding: 0;
+    padding-bottom: 2.5%;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-top: 2.5%;
+    background: linear-gradient(lemonchiffon 10%, lightgrey 40%);
     position: relative;
-    left: 5%;
-    margin-top: 5rem;
 }
 
-img {
-    float: left;
-    margin-right: 2rem;
+header.home>footer {
+    text-align: initial;
+    width: fit-content;
+    position: absolute;
+    right: 0.5rem;
+    bottom: 0.5rem;
 }
 
-#doom_ascii_logo, ul>li:hover {
-    background: radial-gradient(ellipse, #ff0000, #fc8207, #fcfc07);
+pre.doom_ascii_logo {
+    margin-bottom: 0rem;
+    font-size: 2rem;
+}
+
+.doom_ascii_logo, ul>li:hover, section#enter_button.border>a:hover, a:hover {
+    /* background: radial-gradient(ellipse, #ff0000, #fc8207, #fcfc07); */
+    /* background: radial-gradient(ellipse, mediumorchid, darkorchid, orchid 60%); */
+    background: radial-gradient(ellipse, darkorchid 30%, orchid 60%);
     background-clip: text;
     color: transparent;
     font-weight: bold;
 }
 
-footer {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem
+section#enter_button.border {
+    width: fit-content;
+    margin-top: 2em;
+    font-size: 4rem;
+    background: lightgrey;
+}
+
+section#enter_button.border:hover {
+    background: linear-gradient(lightgrey 35%, lemonchiffon 60%);
+}
+
+section#enter_button.border>a {
+    color: initial;
+    cursor: default;
+    text-decoration: none;
+}
+
+body.two {
+    margin: 0;
+}
+
+main.two {
+    display: flex;
+    height: 100dvh;
+    overflow-x: scroll;
+}
+
+main.two>section.border {
+    flex-shrink: 0;
+    width: 35%;
+    margin: 2%;
+}
+
+section#initial>img {
+    object-fit: cover;
+    width: 117px;
+    height: 117px;
+    object-position: left 0px top 70%;
+    float: inline-end;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }

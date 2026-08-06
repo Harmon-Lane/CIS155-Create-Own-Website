@@ -9,48 +9,46 @@
     <title>DOOM</title>
 </head>
 
-<body>
-    <header>
-        <!--
-        I like this type of ascii art logo so I used the pre tag to input it directly from figlet
-        And I've used the id on the pre tag to style it with a gradient fire like color.
+<body class="home">
+    <div class="center_items">
+        <header class="home border">
+            <!--
+                I like this type of ascii art logo so I used the pre tag to input it directly from figlet
+                And I've used the id on the pre tag to style it with a gradient fire like color.
+                -->
+            <h1 class="doom_ascii_logo">
+                <!-- old version
+        ______ _____  ________  ___
+        |  _  \  _  ||  _  |  \/  |
+        | | | | | | || | | | .  . |
+        | | | | | | || | | | |\/| |
+        | |/ /\ \_/ /\ \_/ / |  | |
+        |___/  \___/  \___/\_|  |_/
         -->
-        <h1>
-            <pre id="doom_ascii_logo">
-______ _____  ________  ___
-|  _  \  _  ||  _  |  \/  |
-| | | | | | || | | | .  . |
-| | | | | | || | | | |\/| |
-| |/ /\ \_/ /\ \_/ / |  | |
-|___/  \___/  \___/\_|  |_/
-            </pre>
-        </h1>
-        <a href="https://github.com/Harmon-Lane">I program sometimes, just not here</a>
-    </header>
+                <pre class="doom_ascii_logo">
+   /--------------------------------|
+  /  ______ _____  ________  ___    |
+ /   |  _  \  _  ||  _  |  \/  |    |
+/    | | | | | | || | | | .  . |    |
+|    | | | | | | || | | | |\/| |    |
+|    | |/ /\ \_/ /\ \_/ / |  | |    /
+|    |___/  \___/  \___/\_|  |_/   / 
+|                                 /  
+|--------------------------------/   
+                 </pre>
+            </h1>
+            <a href="https://github.com/Harmon-Lane">I program sometimes, just not here</a>
+            <footer>
+                &copy; Me 2026 <em>EOF</em>
+            </footer>
+        </header>
+    </div>
 
-    <main>
-        <img src="https://wayland.freedesktop.org/wayland.png" alt="The wayland logo">
-        <p>
-            I like working on stuff that interests me.<br>
-            Currently, that is just exploring lower level programming.
-            I am attempting to create some project in C without the standard library.
-            I want that to be a Wayland compsitor but I haven't got super far. <br>
-        </p>
-        <p>At the very least I want to:</p>
-        <ul>
-            <li>Create allocators</li>
-            <li>Use threads</li>
-            <li>Access hardware of some kind like keyboards directly</li>
-        </ul>
-        <p>I also would like to make a programming language at some point maybe under the same project, not sure.</p>
+    <main class="home center_items">
+        <section id="enter_button" class="border">
+            <a href="2ndpg.html">GO</a>
+        </section>
     </main>
-
-    <!--
-    Since I wanted this text in the bottom right side of the screen I used the footer tag to separate it semantically
-    -->
-    <footer>
-        &copy; Me 2026 <em>EOF</em>
-    </footer>
 </body>
 
 </html>
