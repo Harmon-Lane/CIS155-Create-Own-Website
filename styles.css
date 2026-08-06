@@ -9,7 +9,7 @@ body {
 
 .border {
     padding: 0.5rem;
-    border: 0.5rem, outset, grey;
+    border: 0.5rem outset grey;
     /* background: linear-gradient(lightgrey, lightgoldenrodyellow); */
     background: linear-gradient(lightgrey, lemonchiffon);
 }
