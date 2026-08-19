@@ -1,4 +1,3 @@
-/* git pages doesn't seem to like the last commit and won't deploy it so I'm hoping another commit will help */
 /* How tf do I get comic sans on linux fr */
 body {
     font-family: monospace;
@@ -6,9 +5,10 @@ body {
      * Then edited it to be slower.
      */
     background: url(ocean7-5.gif);
+    background-color: #2E579D;
 }
 
-.doom_ascii_logo, ul>li:hover, section#enter_button.border>a:hover, a:hover {
+.funcolor, a:hover, nav.menu>ul>li.current>a {
     /* background: radial-gradient(ellipse, #ff0000, #fc8207, #fcfc07); */
     /* background: radial-gradient(ellipse, mediumorchid, darkorchid, orchid 60%); */
     background: radial-gradient(ellipse, darkorchid 30%, orchid 60%);
@@ -22,27 +22,31 @@ body {
     border: 0.5rem outset grey;
     /* background: linear-gradient(lightgrey, lightgoldenrodyellow); */
     background: linear-gradient(lightgrey, lemonchiffon);
-    overflow: auto;
 }
 
-.center_items {
+/* a common pattern across 2 of the pages */
+header.hdr {
     display: flex;
+    justify-content: left;
     align-items: center;
-    justify-content: center;
 }
 
-div.center_items {
-    flex-direction: column;
-    gap: 10dvh;
+header.hdr>nav.menu {
+    margin-left: 2%;
+    margin-top: 0.5rem;
+    z-index: 1;
 }
 
-header.border.home {
-    text-align: center;
-    padding: 0;
-    padding-bottom: 2.5%;
-    padding-left: 5%;
-    padding-right: 5%;
-    background: linear-gradient(lemonchiffon 10%, lightgrey 40%);
+header.hdr>h1 {
+    margin-left: 2%;
+}
+/**/
+
+body.home {
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    margin: 0;
 }
 
 body.home>footer {
@@ -52,50 +56,152 @@ body.home>footer {
     bottom: 0.5rem;
 }
 
-pre.doom_ascii_logo {
-    margin-bottom: 0rem;
-    font-size: 3dvw;
-}
-
-section#enter_button.border {
-    width: fit-content;
-    font-size: 7dvh;
-    background: lightgrey;
-}
-
-section#enter_button.border:hover {
-    background: linear-gradient(lightgrey 35%, lemonchiffon 60%);
-}
-
-section#enter_button.border>a {
-    color: initial;
-    cursor: default;
-    text-decoration: none;
-}
-
-body.two {
-    margin: 0;
-}
-
-main.two {
+header.home {
+    min-height: fit-content;
+    min-width: fit-content;
+    height: 70%;
+    width: 100%;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+header.home>section.border {
+    text-align: center;
+    background: linear-gradient(lemonchiffon 10%, lightgrey 40%);
+    height: fit-content;
+}
+
+header.home pre {
+    font-size: 4cqb;
+}
+
+main.home {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main.home>nav.menu {
+    z-index: 1;
+}
+
+nav.menu {
+    border: 0.5rem double lightgrey;
+    padding: 1rem;
+    width: fit-content;
+}
+
+nav.menu>ul {
+    list-style: none;
+    padding-left: 0;
+    width: fit-content;
+}
+
+nav.menu>ul>li {
+    display: inline;
+}
+
+body.commits {
+    margin: 0;
+    overflow: hidden;
+    width: 100dvw;
     height: 100dvh;
+}
+
+header.commits>h1 {
+    background: linear-gradient(lemonchiffon 10%, lightgrey 40%);
+    background-clip: text;
+    color:  transparent;
+}
+
+main.commits {
+    display: flex;
+    height: 86%;
     overflow-x: scroll;
 }
 
-main.two>section.border {
+main.commits>section.border {
     flex-shrink: 0;
     width: 35%;
     margin: 2%;
+    overflow: auto;
 }
 
 section#initial>img {
     object-fit: cover;
-    width: 117px;
-    height: 117px;
-    object-position: left 0px top 70%;
+    width: 15cqi;
+    height: 15cqi;
+    max-width: 117px;
+    max-height: 117px;
+    object-position: left 0 top 70%;
     float: inline-end;
     margin-top: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+}
+
+body.yutani {
+    overflow: hidden;
+    background: none;
+    background-color: black;
+    margin: 0;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+header.yutani>h1 {
+    color: #111111;
+}
+
+main.yutani {
+    width: inherit;
+    height: 86%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+/* TODO: add another query for phones in landscape so we can switch
+ * the logo and menu layout to being side to side.
+ * Maybe we can also change commits to go back to row direction but
+ * change the nav menu location to make room.
+ */
+
+@media only screen and (max-width: 730px) {
+    main.commits {
+        flex-direction: column;
+        overflow-x: unset;
+        overflow-y: scroll;
+    }
+    main.commits>section.border {
+        width: unset;
+    }
+}
+
+/* Though these are defined I know I want to maintain
+ * this sort of look, below a certain pixel height.
+ * Otherwise things start breaking.
+ */
+@media only screen and (max-height: 275px) {
+    body.home {
+        overflow: hidden;
+        height: 275px;
+    }
+    header.home pre {
+        font-size: 9px;
+    }
+}
+@media only screen and (max-width: 300px) {
+    body.home {
+        overflow: hidden;
+        width: 300px;
+    }
+    header.home pre {
+        font-size: 9px;
+    }
 }

@@ -10,22 +10,17 @@
 </head>
 
 <body class="home">
-    <div class="center_items">
-        <header class="home border">
-            <!--
-                I like this type of ascii art logo so I used the pre tag to input it directly from figlet
-                And I've used the id on the pre tag to style it with a gradient fire like color.
+    <header class="home">
+        <section class="border">
+            <!-- old version
+                ______ _____  ________  ___
+                |  _  \  _  ||  _  |  \/  |
+                | | | | | | || | | | .  . |
+                | | | | | | || | | | |\/| |
+                | |/ /\ \_/ /\ \_/ / |  | |
+                |___/  \___/  \___/\_|  |_/
             -->
-            <h1 class="doom_ascii_logo">
-                <!-- old version
-                    ______ _____  ________  ___
-                    |  _  \  _  ||  _  |  \/  |
-                    | | | | | | || | | | .  . |
-                    | | | | | | || | | | |\/| |
-                    | |/ /\ \_/ /\ \_/ / |  | |
-                    |___/  \___/  \___/\_|  |_/
-                -->
-                <pre class="doom_ascii_logo">
+            <pre class="funcolor">
    /--------------------------------|
   /  ______ _____  ________  ___    |
  /   |  _  \  _  ||  _  |  \/  |    |
@@ -35,16 +30,19 @@
 |    |___/  \___/  \___/\_|  |_/   / 
 |                                 /  
 |--------------------------------/   
-                </pre>
-            </h1>
+            </pre>
             <a href="https://github.com/Harmon-Lane">I program sometimes, just not here</a>
-        </header>
-        <main class="home">
-            <section id="enter_button" class="border">
-                <a href="2ndpg.html">GO</a>
-            </section>
-        </main>
-    </div>
+        </section>
+    </header>
+    <main class="home">
+        <nav class="home menu">
+            <ul>
+                <li class="border current"><a href="index.html">Home</a></li>
+                <li class="border"><a href="commits.html">Commits</a></li>
+                <li class="border"><a href="yutani.html">Yutani</a></li>
+            </ul>
+        </nav>
+    </main>
     <footer>
         &copy; Me 2026 <em>EOF</em>
     </footer>
